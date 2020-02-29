@@ -77,7 +77,7 @@ def extractIncidents(data):
 #pdfReader = extractIncidents(fetchIncidents(url))
 def createDB():
     try:
-        connection = sqlite3.connect(r"/home/nithivarn/TextAnalytics/cs5293p20-project-0/normanpd.db")
+        connection = sqlite3.connect(r"normanpd.db")
         con = connection.cursor()
         con.execute('''Create table incidents(
         incident_time TEXT,

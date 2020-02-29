@@ -14,14 +14,14 @@ def test_createDB():
 
 def test_populateDB():
     populatedb(extractIncidents(fetchIncidents(url)))
-    dbconn = sqlite3.connect(r"/home/nithivarn/TextAnalytics/cs5293p20-project-0/normanpd.db")
+    dbconn = sqlite3.connect(r"normanpd.db")
     cur = dbconn.cursor()
     cur.execute("Select * from incidents")
     assert len(cur.fetchall()) > 0
     dbconn.close()
 
 def test_status():
-    dbconn = sqlite3.connect(r"/home/nithivarn/TextAnalytics/cs5293p20-project-0/normanpd.db")
+    dbconn = sqlite3.connect(r"normanpd.db")
     cur = dbconn.cursor()
     cur.execute("select nature,count(*) from incidents group by nature order by nature")
     assert len(cur.fetchall()) > 0
