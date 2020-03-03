@@ -10,8 +10,11 @@ from sqlite3 import Error
 #df= pd.DataFrame(columns=['incident_time','incident_number','incident_location','nature','incident_ori'])
 #getting the pdf file from the page which is provided as URL
 def fetchIncidents(url):
-    #url = ("http://normanpd.normanok.gov/filebrowser_download/657/2020-02-05%20Daily%20Incident%20Summary.pdf")
-    data=urllib.request.urlopen(url).read()
+    try:
+        data=urllib.request.urlopen(url).read()
+    except urllib.error.HTTPError:
+        print("url entered is not working")
+        return None
     return data
 
 
@@ -21,11 +24,14 @@ def extractIncidents(data):
         args:
             data : which is returned by the fetchIncidents(url)
         returns:
-            pdfReader object.
+            Dataframe.
     """
     df = pd.DataFrame(columns=['incident_time', 'incident_number', 'incident_location', 'nature', 'incident_ori'])
     fh =tempfile.TemporaryFile()
-    fh.write(data)
+    try:
+        fh.write(data)
+    except TypeError:
+        return df
     fh.seek(0)
     pdfReader = PyPDF2.pdf.PdfFileReader(fh)
     for page in range(pdfReader.getNumPages()):
@@ -70,11 +76,9 @@ def extractIncidents(data):
     df = df.drop(df.index[0])
     df[df == ''] = "NULL"
     return df
-    #return pdfReader
 
 
-#url = ("http://normanpd.normanok.gov/filebrowser_download/657/2020-02-24%20Daily%20Incident%20Summary.pdf")
-#pdfReader = extractIncidents(fetchIncidents(url))
+
 def createDB():
     try:
         connection = sqlite3.connect(r"normanpd.db")
@@ -89,7 +93,7 @@ def createDB():
         connection.commit()
         connection.close()
     except Error as e:
-        print(e)
+        print(str(e) + "-- so dropping it in populatedb method")
 
 def populatedb(incidents,db="normanpd.db"):
     """
