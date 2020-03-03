@@ -1,6 +1,6 @@
 # cs5293p20-project-0
 
-The main aim of the project is to provide a summary of the nature and count of each nature of the incident that has happended on a particular in norman.
+The main aim of the project is to provide a summary of the nature and count of each nature of the incident that has happended on a particular day in norman.
 The data is collected from norman police department website http://normanpd.normanok.gov/content/daily-activity. I am taking an incident report of a particular date and displaying the results based on that report.
 
 ### Author - Nithivarn Reddy Shanigaram 
@@ -13,7 +13,7 @@ External Packages used
 > Pandas
 > Pytest
 
-## Steps to install the project.
+## Steps to install the project
 
 Open your Terminal..
 
@@ -41,7 +41,7 @@ Now run the project using the following command
   
 This will display the result in your console / terminal.
 
-## Assumptions made in the project are:
+## Assumptions made in the project are
 
 1) The url provided needs to be a working one.
 
@@ -58,4 +58,4 @@ This will display the result in your console / terminal.
 ## External Sources referred
 
 1. pipenv overview [link](https://realpython.com/pipenv-guide/)
-2. pandas [link] (https://pandas.pydata.org/pandas-docs/stable/getting_started/10min.html)
+2. pandas [link](https://pandas.pydata.org/pandas-docs/stable/getting_started/10min.html)
