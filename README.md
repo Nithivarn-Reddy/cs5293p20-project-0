@@ -8,7 +8,8 @@ The data is collected from norman police department website http://normanpd.norm
 ### Email - nithivarn.reddy.shanigaram-1@ou.edu
 
 ### Structure
-...bash
+
+```
 └── cs5293p20-project-0
     ├── LICENSE
     ├── Pipfile
@@ -23,8 +24,7 @@ The data is collected from norman police department website http://normanpd.norm
     └── tests
         ├── test_eincidents.py
         └── test_incidents.py
-
-...
+```
 
 External Packages used 
 
