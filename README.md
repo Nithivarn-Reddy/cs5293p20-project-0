@@ -7,10 +7,30 @@ The data is collected from norman police department website http://normanpd.norm
 
 ### Email - nithivarn.reddy.shanigaram-1@ou.edu
 
+### Structure
+└── cs5293p20-project-0
+    ├── LICENSE
+    ├── Pipfile
+    ├── Pipfile.lock
+    ├── README.md
+    ├── project0
+    │   ├── __init__.py
+    │   ├── main.py
+    │   └── project0.py
+    ├── setup.cfg
+    ├── setup.py
+    └── tests
+        ├── test_eincidents.py
+        └── test_incidents.py
+
+
+
 External Packages used 
 
 > PyPDF2
+
 > Pandas
+
 > Pytest
 
 ## Steps to install the project
@@ -41,6 +61,17 @@ Now run the project using the following command
   
 This will display the result in your console / terminal.
 
+## To run testcases 
+Go inside the virtual environment by running the following commands.
+
+1) cd cs5293p20-project-0
+
+2) Run pipenv shell
+
+3) Run pytest
+
+
+
 ## Assumptions made in the project are
 
 1) The url provided needs to be a working one.
@@ -59,3 +90,5 @@ This will display the result in your console / terminal.
 
 1. pipenv overview [link](https://realpython.com/pipenv-guide/)
 2. pandas [link](https://pandas.pydata.org/pandas-docs/stable/getting_started/10min.html)
+3. Replacing empty spaces in dataframe [link](https://stackoverflow.com/questions/13445241/replacing-blank-values-white-space-with-nan-in-pandas)
+
