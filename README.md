@@ -102,6 +102,7 @@ Go inside the virtual environment by running the following commands.
      Takes as input the bytes object returned from fetchIncidents() method.
      This is the main method where the bytes data is extracted and converted into unicode string . Then the unicode string        is used to extract data from columns and place in it a dataframe.
      Most of the assumptions and edge cases are covered here.
+     Data is splitted based on the date.
      returns an dataframe.
 #### createDB():
      This method creates a database named "normanpd.db" in the current location where the project is cloned.
