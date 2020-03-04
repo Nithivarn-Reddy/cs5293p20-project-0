@@ -50,15 +50,16 @@ Open your Terminal..
 3) cd into cs5293p20-project-0
 
 4) Run pipenv install
-   This command installs all the dependencies required by the project. (provided in the Pipfile)
+  
+ This command installs all the dependencies required by the project. (provided in the Pipfile)
 
 ## Steps to Run the project
 
 Now run the project using the following command
 
-  pipenv run python project0/main.py --incidents <url>
+ > pipenv run python project0/main.py --incidents Enter-Url
   
-  eg : <url> = http://normanpd.normanok.gov/filebrowser_download/657/2020-02-19%20Daily%20Incident%20Summary.pdf
+  eg : Enter-Url = http://normanpd.normanok.gov/filebrowser_download/657/2020-02-19%20Daily%20Incident%20Summary.pdf
   
 This will display the result in your console / terminal.
 
