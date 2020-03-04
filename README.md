@@ -55,7 +55,7 @@ Open your Terminal..
 
 ## Steps to Run the project
 
-Now run the project using the following command
+Now run the project using the following command (Inside the cs5293p20-project-0)
 
  > pipenv run python project0/main.py --incidents Enter-Url
   
